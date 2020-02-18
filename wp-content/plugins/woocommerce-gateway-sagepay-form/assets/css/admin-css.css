@@ -1,0 +1,90 @@
+.widefat .column-sage_security {
+	width: 110px;
+}
+
+.widefat .column-sage_security span.sagepay-ok {
+	background: #73a724;
+}
+
+.widefat .column-sage_security span.sagepay-fail {
+	background: #a00;
+}
+
+.widefat .column-sage_security span.sagepay-check {
+	background: #ffba00;
+}
+
+.widefat .column-sage_security span {
+	color: #FFFFFF;
+
+	width: 30px; 
+	height: 30px; 
+	-moz-border-radius: 15px; 
+	-webkit-border-radius: 15px; 
+	border-radius: 15px;
+
+	margin: 0 2px 0 0;
+	padding: 0 4px;
+}
+
+.widefat .column-order_status mark.fraud-screen {
+	display:block;
+	text-indent:-9999px;
+	position:relative;
+	height:1em;
+	width:1em;
+	background:none;
+	font-size:1.4em;
+	margin:0 auto
+}
+
+.widefat .column-order_status mark.fraud-screen:after {
+	font-family:'WooCommerce';
+	speak:none;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	margin:0;
+	text-indent:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	content:"\e602";
+	color:#990033
+}
+
+.widefat .column-order_status mark.authorised {
+	display:block;
+	text-indent:-9999px;
+	position:relative;
+	height:1em;
+	width:1em;
+	background:none;
+	font-size:1.4em;
+	margin:0 auto
+}
+
+.widefat .column-order_status mark.authorised:after {
+	font-family:'WooCommerce';
+	speak:none;
+	font-weight:normal;
+	font-variant:normal;
+	text-transform:none;
+	line-height:1;
+	-webkit-font-smoothing:antialiased;
+	margin:0;
+	text-indent:0;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	content:"\e011";
+	color:#ffcc00
+}

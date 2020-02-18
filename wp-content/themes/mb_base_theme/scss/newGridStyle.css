@@ -1,0 +1,343 @@
+/*
+ Theme Name:   MB_Base
+ Description:  Very basic reset css and not much else
+ Author:       Martin B
+ Version:      0.1
+*/
+body,
+p,
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#contact-dropdown {
+  background-color: #122dc2;
+  color: white;
+}
+
+#headerGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 50px 1fr 1fr;
+      grid-template-columns: 40% 50px 1fr 1fr;
+  -ms-grid-rows: 50px auto auto;
+      grid-template-rows: 50px auto auto;
+      grid-template-areas: "contact cart search search" "logo . buttons buttons";
+}
+
+#headerGrid .cartIcon {
+  margin-top: 7px;
+}
+
+#headerGrid .cartIcon img {
+  width: 60%;
+}
+
+#headerGrid #contactUs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: contact;
+}
+
+#headerGrid #searchBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: search;
+}
+
+#headerGrid #cartIcon {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: cart;
+}
+
+#headerGrid #Vbuttons {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: buttons;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  padding-right: 10px;
+  margin-right: 25px;
+}
+
+#headerGrid #Vbuttons .t4f {
+  background: white;
+  border: 1px solid orange;
+  color: orange;
+  border-radius: 7px;
+  margin-right: 6px;
+}
+
+#headerGrid #Vbuttons .Vlogin {
+  background: white;
+  border: 1px solid #55ce55;
+  color: #55ce55;
+  border-radius: 7px;
+  margin-right: 6px;
+}
+
+#headerGrid #logo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+#headerGrid #logo img {
+  margin: 4px 0 0 10px;
+}
+
+#footerGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+      grid-template-areas: "footer footer footer";
+}
+
+#videoPageGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: repeat auto, 6 1fr;
+      grid-template-rows: repeat auto, 6 1fr;
+      grid-template-areas: "enhSearch enhSearch enhSearch" "resource resource resource" "smallcontent1 smallcontent1 smallcontent1" "smallcontent2 smallcontent2 smallcontent2" "morelikethis morelikethis morelikethis" "shop shop shop" "login login login" "social social social";
+}
+
+#videoPageGrid #resourceBlock {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: resource;
+  background: red;
+}
+
+#videoPageGrid #morelikeThis {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: morelikethis;
+  background: yellow;
+}
+
+.myBtn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 9px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+#enhSearch {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: enhSearch;
+  width: 80%;
+  margin: auto auto 20px auto;
+}
+
+#enhSearch p {
+  margin: 0;
+  padding: 0;
+  color: orange;
+  margin-right: 5px;
+}
+
+#enhSearch .enhInputGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#enhSearch .enhInputGroup select2-container {
+  width: 80%;
+  height: 38px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+#enhSearch .enhInputGroup input {
+  border: solid 1px #aaa;
+  width: 80%;
+  height: 30px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+#enhSearch .enhInputGroup .enhSearchBtn {
+  margin-top: -2px;
+  height: 34px;
+}
+
+#pageGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr;
+  -ms-grid-rows: auto auto auto auto 1fr;
+      grid-template-rows: auto auto auto auto 1fr;
+      grid-template-areas: "bigpic bigpic bigpic" "hero hero hero" "content content content" "testimonials testimonials testimonials" "smallcontent1 smallcontent1 smallcontent1" "smallcontent2 smallcontent2 smallcontent2" "shop shop shop" "login login login" "social social social";
+}
+
+#pageGrid #hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: hero;
+  font-weight: bold;
+}
+
+#pageGrid #hero h1 {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+#pageGrid #bigpic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: bigpic;
+}
+
+#pageGrid #bigpic .picWrap {
+  width: 80%;
+  margin: 10px auto;
+}
+
+#pageGrid #bigpic .picWrap img {
+  border-radius: 30px;
+}
+
+#pageGrid .hero-section-text {
+  text-align: center;
+}
+
+#pageGrid #social {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: social;
+}
+
+#pageGrid #mainContent {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content;
+}
+
+#pageGrid #mainContent p {
+  color: #747474;
+  width: 76%;
+  text-align: center;
+  margin: auto auto;
+  font-size: 13px;
+}
+
+#pageGrid #testimonials {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: testimonials;
+}
+
+#smallContent1 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: smallcontent1;
+  display: none;
+}
+
+#smallContent1 .panel {
+  width: 80%;
+  margin: auto auto;
+  background: #d1d1d1;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 13px;
+  margin: 10px auto 10px auto;
+}
+
+#smallContent2 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: smallcontent2;
+  display: none;
+}
+
+#smallContent2 .panel {
+  width: 80%;
+  margin: auto auto;
+  background: #d1d1d1;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 13px;
+  margin: 10px auto 10px auto;
+}
+
+#shopHome {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: shop;
+}
+
+#shopHome .product {
+  width: 80%;
+  margin: 10px 10% 10px 10%;
+  border: 1px gray solid;
+  padding: 10px;
+}
+
+#shopHome .mb_product {
+  font-size: 11px;
+  color: black;
+}
+
+#loginForm {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: login;
+  background: #ece7eb;
+  border: 1px solid #ed8ed8;
+}
+
+#loginForm #loginform {
+  width: 80%;
+  margin: auto auto;
+}
+
+#loginForm #loginform input:not([type=checkbox]) {
+  width: 100% !important;
+}
+
+#footer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  width: 100%;
+}
+
+#footer p {
+  background: black;
+  color: white;
+  margin-bottom: 0;
+  padding: 10px;
+}
+/*# sourceMappingURL=newGridStyle.css.map */

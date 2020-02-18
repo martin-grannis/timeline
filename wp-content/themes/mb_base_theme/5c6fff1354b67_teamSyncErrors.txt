@@ -1,0 +1,2 @@
+Sync started at 22/02/19 13:54:27
+Existing = - user is owner or manager so left alone

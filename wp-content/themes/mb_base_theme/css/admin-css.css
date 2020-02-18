@@ -1,0 +1,69 @@
+
+.button-admin-clear {
+	background-color: red !important;
+	margin-top: 5px !important;
+}
+
+/* in case js not enabled on browser */
+#tSyncRow, #tOptionsRow {
+	display:none;
+}
+
+#currentTeamHeading,#currentOptionHeader {
+    margin-left: 100px;
+	float: left;
+	color:red;
+}
+
+#currentTeam,#currentOptionChoice {
+	float: right;
+	color:black;
+	font-weight:bold;
+	margin-left:10px;
+}
+#currentOptionDescription {
+	margin-left: 270px;
+	margin-top:30px;
+    color: black;
+    font-weight: bold;
+    background-color: #e8caca;
+    width: fit-content;
+    padding: 9px;
+}
+#subbie {
+    margin-left: 108px;
+}
+#subbie>p{
+	margin-top:0;
+	padding-top:6px;
+}
+
+/* form css as one off for admin  */
+.f_alert {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	transition: opacity 0.15s linear;
+	margin-left: 0;
+  }
+  .f_alert::after, .f_alert::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  .f_alert > li {
+	list-style: none;
+  }
+  .f_red {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #b17881;
+  }
+  .f_green {
+	color: #000000;
+	background-color: #7cfe02d8;
+	border-color: #0a6612;
+  }
+  
+

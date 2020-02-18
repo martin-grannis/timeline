@@ -1,0 +1,2 @@
+Sync started at 21/02/19 16:57:28
+Incoming=907, Valid=876, Invalid=0, Duplicates=31

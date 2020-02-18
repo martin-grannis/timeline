@@ -1,0 +1,165 @@
+body, div, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding: 10px;
+  color: white;
+}
+
+// mobile first: anything less than 768
+
+$breakpoint-tablet-portrait: 768px;
+$breakpoint-tablet-landscape: 1024px;
+$breakpoint-desktop: 1224px;
+$breakpoint-massive: 1824px;
+
+#mainWrapper {
+  display: grid;
+  //grid-template-rows: 100px 50px 50px 1fr 1fr 50px;
+  grid-template-rows: auto /* Topbar */
+  minmax(75px, auto) /* Nav */
+  minmax(75px, auto) /* Search */
+  1fr /* Content1 */
+  1fr /* Content2 */
+  minmax(75px, auto) /* Sidebar1 */
+  minmax(75px, auto) /* Sidebar2 */
+  auto; /* Footer */
+
+  /*grid-template-columns: 1fr 2fr 2fr 1fr;*/
+  // default grid areas
+  grid-template-areas: "topbar" "search" "nav" "content1" "content2" "sidebar1" "sidebar2" "footer";
+  width: 100vw;
+  height: 100vh;
+
+  @media(screen and min-width: $breakpoint-tablet-portrait) {
+    grid-template-columns: 1fr 2fr;
+    //grid-template-rows: 50px 50px 1fr 1fr 50px;
+    grid-template-areas: "topbar topbar" "nav search" "content1 content1" "content2 content2" "sidebar1 sidebar1" "sidebar2 sidebar2" "footer footer";
+
+  }
+  //@media(screen and min-width: $breakpoint-desktop) {
+  //  grid-template-columns: 1fr 2fr 2fr;
+  //  grid-template-areas: "topbar topbar topbar topbar topbar" "nav nav nav nav nav nav" "search search search search search" "content1 content1 content1 content1 content1" "content2 content2 content2 content2 content2" "sidebar1 sidebar1 sidebar1 sidebar1 sidebar1" "sidebar2 sidebar2 sidebar2 sidebar2 sidebar2" "footer footer footer footer footer";
+  //
+  //}
+  //@media(screen and min-width: $breakpoint-massive) {
+  //  grid-template-columns: 1fr 2fr 2fr 1fr;
+  //  grid-template-areas: "topbar topbar topbar topbar topbar topbar" "nav nav nav nav nav nav" "search search search search search search" "content1 content1 content1 content1 content1 content1" "content2 content2 content2 content2 content2 content2" "sidebar1 sidebar1 sidebar1 sidebar1 sidebar1 sidebar1" "sidebar2 sidebar2 sidebar2 sidebar2 sidebar2 sidebar2" "footer footer footer footer footer footer";
+  //  //grid-template-rows: 50px 50px 50px 1fr 1fr 50px;
+  //}
+
+}
+
+$topbar_bc: #1e3f9c;
+
+div {
+  //border: 1px red solid;
+}
+
+#topbar {
+  display: grid;
+  grid-area: topbar;
+  //grid-template-columns: 40% 1fr;
+  //grid-temoplate-rows: 200px 100px 1fr;
+  grid-template-areas: "oneRow oneRow" "topLeft topRightA" "topLeft topRightB" "topLeft topRightC";
+  .topLeftOptional {
+    display: none;
+  }
+
+  @media(min-width: 768px) {
+    grid-template-areas: "oneRow oneRow oneRow" "topLeft topLeftOptional topRightA" "topLeft topLeftoptional topRightB" "topLeft topLeftoptional topRightC";
+    .topLeftOptional {
+      display: block;
+    }
+  }
+}
+
+.oneRow {
+  background-color: blue;
+  color: white;
+  grid-area: oneRow;
+  text-align: center;
+  padding:10px;
+
+}
+
+.topLeft {
+  grid-area: topLeft;
+  //min-height:30vh;
+}
+
+.topLeftOptional {
+  grid-area: topLeftOptional;
+  //min-height:30vh;
+}
+
+.topRightA {
+  grid-area: topRightA;
+}
+
+.topRightB {
+  grid-area: topRightB;
+}
+
+.topRightC {
+  grid-area: topRightC;
+}
+
+.topLeft img {
+  height: 80px;
+  padding: 10px 0 5px 10px;
+}
+
+.topRightA {
+  padding: 10px
+}
+
+.topRightB {
+  padding: 0 0 5px 10px;
+}
+
+.topRightC {
+  //justify-self: center;
+  img {
+    height: 40px;
+    padding: 5px 0 5px 10px;
+  }
+}
+
+#nav {
+  background-color: #0b8173;
+  grid-area: nav;
+}
+
+#search {
+  background-color: #b479a0;
+  grid-area: search;
+}
+
+#content1 {
+  background-color: #0a9bd6;
+  grid-area: content1;
+}
+
+#content2 {
+  background-color: #3ad61c;
+  grid-area: content2;
+}
+
+#sidebar1 {
+  background-color: #c0c0c0;
+  grid-area: sidebar1;
+}
+
+#sidebar2 {
+  background-color: #d67b22;
+  grid-area: sidebar2;
+}
+
+#footer {
+  background-color: #000000;
+  grid-area: footer;
+}

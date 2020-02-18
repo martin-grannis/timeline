@@ -1,0 +1,5 @@
+Sync started at 22/02/19 11:20:39
+Incoming=abc@hhhhjk.com is already a member or pending - skipped
+Incoming=fred@hotmail.co.uk is already a member or pending - skipped
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped

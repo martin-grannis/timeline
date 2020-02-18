@@ -1,0 +1,6 @@
+Sync started at 03/09/19 14:12:28
+Existing =abc@hhhhjk.com invitation cancelled
+Incoming=martin.grannis@gmail.com invitation created
+Incoming=fred@hotmail.co.uk is already a member or pending - skipped
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped

@@ -1,0 +1,10 @@
+Sync started at 22/02/19 14:58:01
+Existing =itsupport@stjohns-nottm.ac.uk member removed
+Existing =great.garbo@hotmail.com invitation cancelled
+Incoming=abc@hhhhjk.com invitation created
+Incoming=fred@hotmail.co.uk invitation created
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped
+Incoming=anicolao@verizon.net error: No more seats left
+
+No more free seats - import abandoned at this point

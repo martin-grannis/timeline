@@ -1,0 +1,5 @@
+Sync started at 03/10/19 14:01:07
+Incoming=marketing@stjohns-nottm.ac.uk error: Already invited
+Incoming=njpayne@me.com error: Already invited
+Incoming=jimxugle@me.com error: Already invited
+Incoming=barnett@yahoo.ca error: Already invited

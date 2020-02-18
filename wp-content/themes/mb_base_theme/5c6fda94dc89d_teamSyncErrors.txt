@@ -1,0 +1,5 @@
+Sync started at 22/02/19 11:18:44
+Incoming=a invitation created
+Incoming=f invitation created
+Incoming=j invitation created
+Incoming=s invitation created

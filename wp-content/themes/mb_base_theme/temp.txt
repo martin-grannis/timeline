@@ -1,0 +1,87 @@
+    <!-- subscribe -->
+    <div id="buyH">
+    <div class="fIcon">
+        <a href="/#shopHome">
+
+        <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-shopping-64.png" alt="subscribe link">
+
+        <div class="linkText">Subscribe</div>
+            </a>
+            </div>
+
+            <?php if (is_user_logged_in()) {?>
+<div class="s_overly">
+                <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-disabled.png" alt="disabled link">
+            </div>        
+        
+            <?php }?>
+
+
+    </div>
+
+<!-- login -->
+    <div id="loginH">
+    <div class="fIcon">
+
+    <?php if (!is_user_logged_in()) {?>
+
+
+    <!-- logged out version     -->
+    <a href="/#loginForm">
+
+        <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-no-entry-64.png" alt="video list link">
+
+            <div class="linkText">Login</div>
+
+            </a>
+            </div>
+
+            <?php } else {?>
+
+    <!-- logged in version     -->
+    <a href="/wp-login.php?action=logout">
+
+        <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-door-sensor-checked-64.png" alt="video list link">
+
+            <div class="linkText">Logout</div>
+
+            </a>
+            </div>
+
+            <?php }?>
+
+
+
+
+
+    </div>
+
+    <!-- account profile -->
+    <div id="profileH">
+    <div class="fIcon">
+        <a href="/my-account">
+        <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-user-64.png" alt="subscribe link">
+            <div class="linkText">Account</div>
+            </a>
+            </div>
+
+            <?php if (!is_user_logged_in()) {?>
+<div class="s_overly">
+                <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/icons8-disabled.png" alt="disabled link">
+            </div>        
+        
+            <?php }?>
+
+    </div>
+
+sjc web site
+    <div id="sjcH">
+    <div class="fIcon">
+        <a href="/">
+        <img src="/wp-content/themes/mb_base_theme/siteImages/frontI/mwb-sjc2-64.png" alt="contact link">
+            <!-- <div class="linkText">St John's</div>   -->
+            </a>
+            </div>
+    </div>
+
+

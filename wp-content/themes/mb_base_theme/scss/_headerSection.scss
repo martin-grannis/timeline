@@ -1,0 +1,142 @@
+$myRed:#c72b2c;
+
+#headerGrid {
+    display: grid;
+    grid-template-columns: 25% 25% 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  
+    grid-template-areas:
+      "logo logo topbar topbar"
+      "buttons buttons buttons buttons"
+      "loggedin loggedin loggedin loggedin";
+  
+    #loggedinDetails {
+      margin-left: 10px;
+      font-size: .7em;
+      color: black;
+      grid-area: loggedin;
+      display: flex;
+  
+      #lname {
+        flex: 1;
+      }
+  
+      #lout {
+        flex: 0;
+        margin-right: 25px;
+      }
+    }
+  
+  }
+  
+  
+#logo {
+  grid-area: logo;
+
+  img {
+    //margin: 16px 0 0 10px;
+    margin: 12px;
+    //max-width: 100%;
+    max-width: 145px;
+
+    // big screen
+    @media only screen and (min-width: 1080px) {
+      font-size: 1.4em;
+      line-height: unset;
+      height: 216px;
+      margin: 13px 0 14px 34px;
+      max-width: unset;
+    }
+
+  }
+
+}
+
+#topbar {
+  grid-area: topbar;
+  //background: white;
+  display: flex;
+  justify-self: end;
+
+  .cartIcon  {
+    margin-top: 9px;
+    width: 45%;
+    position: absolute;
+    left: 89%;
+    top: -5px;
+    font-size: 13px;
+   
+    // big screen
+    @media only screen and (min-width: 1080px) {
+      font-size: 1.4em;
+    }
+
+    img {
+      width: 35%;
+    }
+  }
+
+  .contactUsList {
+    margin: 9px 25px 6px 0;
+    text-align: right;
+  
+    li {
+      list-style: none;
+      color: $myRed;
+      font-size: 66%;
+      line-height: 20px;
+  
+      // big screen
+      @media only screen and (min-width: 1080px) {
+        font-size: 1.5em;
+        line-height: unset;
+      }
+  
+  
+    }
+  }
+  
+}
+
+#Vbuttons {
+  grid-area: buttons;
+
+  //justify-self: right; // ie line this grid aread itself to the right
+  // padding-right: 10px;
+  // margin-right: 25%;
+  // align-self: end;
+  background: $myRed;
+  width: 100%;
+
+  .fullList {
+    a {
+      font-size: 10px;
+      color: black;
+    }
+  }
+
+  .button-group {
+    margin-bottom: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .button {
+    background: white;
+    border: 3px dotted red;
+    color: $myRed;
+    border-radius: 7px;
+    margin-right: 5%;
+    flex-grow: 1;
+  }
+
+  // .Vlogin {
+  //   background: white;
+  //   border: 1px solid rgb(85, 206, 85);
+  //   color: rgb(85, 206, 85);
+  //   border-radius: 7px;
+  //   margin-right: 12px;
+  // }
+}
+

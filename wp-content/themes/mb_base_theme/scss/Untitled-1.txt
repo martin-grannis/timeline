@@ -1,0 +1,39 @@
+
+  // can the rest below this go yet?
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: orange;
+    margin-right: 5px;
+  }
+
+  .enhInputGroup {
+    display: flex;
+
+    select2-container {
+      // border: solid 1px black;
+      width: 80%;
+      height: 38px;
+      border-radius: 10px;
+      margin-right: 5px;
+    }
+
+    input {
+      border: solid 1px #aaa;
+      width: 80%;
+      height: 30px;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+
+
+
+    .enhSearchBtn {
+      margin-top: -2px;
+      height: 34px;
+    }
+  }
+
+  ///////////////// enh search block
+  

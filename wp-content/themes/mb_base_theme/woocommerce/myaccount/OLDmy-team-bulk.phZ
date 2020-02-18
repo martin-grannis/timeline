@@ -1,0 +1,517 @@
+<?php
+// mr b added for bulk actions
+
+defined('ABSPATH') or exit;
+
+//require_once get_template_directory() . '/functions/exportTeam.php';
+require_once get_template_directory() . '/readCSV.php';
+
+$seat_count = $team->get_seat_count();
+$remaining_seats = $team->get_remaining_seat_count();
+$fields = wc_memberships_for_teams()->get_frontend_instance()->get_add_team_member_form_fields();
+
+?>
+
+
+<div class="woocommerce-account-my-teams">
+
+    <p>
+        <?php if ($seat_count > 0): ?>
+        <?php printf(_n('This team has <strong>%d seat remaining</strong>.', 'This team has <strong>%d seats remaining</strong>.', $remaining_seats, 'woocommerce-memberships-for-teams'), $remaining_seats);?>
+        <?php else: ?>
+        <?php _e('This team has <strong>unlimited seats</strong>.', 'woocommerce-memberships-for-teams');?>
+        <?php endif;?>
+
+    </p>
+
+    <!-- error checking after submission -->
+    <?php
+$processType = "";
+if (isset($_POST['syncTeam-flag'])) {
+    $processType = "sync";
+}
+if (isset($_POST['addTeam-flag'])) {
+    $processType = "add";
+}
+if (isset($_POST['delTeam-flag'])) {
+    $processType = "del";
+}
+
+// if (isset($_POST['exportTeam-flag'])) {
+//     $processType = "exp";
+// }
+
+if ($processType != "") {
+
+    if (check_admin_referer('syncTeam-import', '_team_sync_nonce')
+    ) {
+
+        // TODO these log files need deleting every midnight - else they will clog us up !
+        // once viewed or downloaded they are no longer available anyway unless users saves the url
+
+        $errors = new WP_Error();
+
+        $results = [];
+
+        $uFileName = "/" . uniqid() . '_teamSyncErrors.txt';
+        $error_logFile = get_stylesheet_directory() . $uFileName;
+        $error_logFile_url = get_stylesheet_directory_uri() . $uFileName;
+
+        $uploadOk = 1;
+
+        if ($_FILES["syncTeamFile"]["size"] > 250000) {
+            // if ($_FILES["syncTeamFile"]["size"] > 2) {
+            $errors->add('filetooBig', 'That file is too big sorry !');
+            $uploadOk = 0;
+        }
+
+        // validate the filename and size
+        if (empty($_FILES['syncTeamFile']['tmp_name'])) {
+            $errors->add('noFile', 'The filename is empty - please select a file first');
+            $uploadOk = 0;
+
+        }
+
+        if ($uploadOk) {
+
+            $isOK = true;
+            // POST upload sanity check
+            // check if it's a csv file
+            // not a csv
+            if (substr($_FILES['syncTeamFile']['name'], -4) != '.csv') {
+                $errors->add('notCSV', 'Your filename must end with ".csv"');
+                $isOK = false;
+            }
+
+            // check header
+            // check data first row
+
+            if (!isSyncfileValid($_FILES['syncTeamFile']['tmp_name'], $errors)) {
+                $isOK = false;
+            }
+
+            if ($isOK) {
+
+                //if (!empty($_FILES['syncTeamFile']['tmp_name'])) {
+                // Setup settings variables
+                $filename = $_FILES['syncTeamFile']['tmp_name'];
+                $results = do_teamSync($filename, $team, $error_logFile, $processType);
+                if (count($results) > 1) {
+
+                    echo '<ul class="f_alert f_red">';
+                    foreach ($results as $k => $r) {
+                        if ($k > 0) {
+                            echo '<li>' . $r . '</li>';
+                        } else {
+                            echo '<li>Latest log file is here <a href="' . $error_logFile_url . '">to view</a></li>';
+                        }
+                    }
+                    echo '</ul>';
+
+                } else {
+                    // we've returned the process details in the first element of array
+                    echo '<ul class="f_alert f_green">';
+                    echo '<li>' . $results[0] . '</li>';
+                    echo '<li>The last team Sync log is here <a href="' . $error_logFile_url . '">to view - (will be deleted at midnight so please save if needed)</a></li>';
+                    echo '</ul>';
+                }
+
+            }
+
+        }
+    }
+}
+
+?>
+
+    <h3>Export Members to CVS</h3>
+    <p>Exports members in a sync compatible formatted file</p>
+
+    <!-- <form id="exportTeam" target="_blank" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post"> -->
+    <form id="exportTeam" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+        <?php wp_nonce_field('syncTeam-import', '_team_sync_nonce');?>
+        <input type="hidden" name="syncTeam" value="<?php echo esc_attr($team->get_id()); ?>" />
+        <input type="hidden" name="action" value="export_Team">
+        <input class="exportTeam" type="submit" id="exportTeamSubmit" value="Export" />
+    </form>
+
+    <hr><br />
+
+    <h3>Sync via CSV</h3>
+    <p>Upload your CSV file - careful as this changes all your members in one go</p>
+    <?php
+
+if ($processType == "sync" && isset($errors) && $errors->get_error_code()):
+    echo '<ul class="f_alert f_red">';
+    foreach ($errors->errors as $error) {
+        echo '<li>' . $error[0] . '</li>';
+    }
+    echo '</ul>';
+endif;
+?>
+
+    <form id="syncTeam" method="post" enctype="multipart/form-data">
+
+        <?php wp_nonce_field('syncTeam-import', '_team_sync_nonce');?>
+
+        <input type="hidden" name="syncTeam" value="<?php echo esc_attr($team->get_id()); ?>" />
+
+        <div class='form-fields'>
+            <input type='hidden' name='syncTeam-flag' />
+            <input type='file' id='syncTeamFile' name='syncTeamFile' class='syncTc' /><br />
+            <h6>NOTE: this can take up to 5 minutes per thousand emails<br>
+                - refreshing the page just starts it over again!</h6>
+
+        </div>
+        <input class="syncTeamSubmit" type="submit" id="syncTeamSubmit" value="Start Sync" onclick="ChangeCursor()" />
+    </form>
+
+    <hr><br />
+
+    <h3>Add new via CSV</h3>
+    <p>Upload new members from CSV file - no deletions </p>
+    <?php
+
+if ($processType == "add" && isset($errors) && $errors->get_error_code()):
+    echo '<ul class="f_alert f_red">';
+    foreach ($errors->errors as $error) {
+        echo '<li>' . $error[0] . '</li>';
+    }
+    echo '</ul>';
+endif;
+?>
+
+    <form id="addToTeam" method="post" enctype="multipart/form-data">
+
+        <?php wp_nonce_field('syncTeam-import', '_team_sync_nonce');?>
+
+        <input type="hidden" name="syncTeam" value="<?php echo esc_attr($team->get_id()); ?>" />
+
+        <div class='form-fields'>
+            <input type='hidden' name='syncTeam-flag' />
+            <input type='file' id='syncTeamFile' name='syncTeamFile' class='syncTc' /><br />
+
+        </div>
+        <input class="addTeamSubmit" type="submit" id="addTeamSubmit" value="Start Add from CSV" onclick="ChangeCursor()" />
+    </form>
+
+    <hr><br />
+
+    <h3>Delete via CSV</h3>
+    <p>Delete members via CSV file</p>
+    <?php
+
+if ($processType == "del" && isset($errors) && $errors->get_error_code()):
+    echo '<ul class="f_alert f_red">';
+    foreach ($errors->errors as $error) {
+        echo '<li>' . $error[0] . '</li>';
+    }
+    echo '</ul>';
+endif;
+?>
+
+    <form id="addToTeam" method="post" enctype="multipart/form-data">
+
+        <?php wp_nonce_field('syncTeam-import', '_team_sync_nonce');?>
+
+        <input type="hidden" name="syncTeam" value="<?php echo esc_attr($team->get_id()); ?>" />
+
+        <div class='form-fields'>
+            <input type='hidden' name='delTeam-flag' />
+            <input type='file' id='syncTeamFile' name='syncTeamFile' class='syncTc' /><br />
+
+        </div>
+        <input class="delTeamSubmit" type="submit" id="delTeamSubmit" value="Start deletions via CSV" onclick="ChangeCursor()" />
+    </form>
+
+    <hr><br />
+
+
+
+    <style type="text/css">
+        .waiting {
+            cursor: wait;
+        }
+    </style>
+
+    <script>
+        function ChangeCursor() {
+            var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
+            var caller = document.getElementById('syncTeamSubmit');
+            root.setAttribute('class', 'waiting');
+            caller.setAttribute('class', 'waiting');
+
+            document.body.style.cursor = 'wait';
+        }
+    </script>
+
+</div>
+
+<?php
+
+function isSyncfileValid($f, &$e)
+{
+
+    $file_handle = @fopen($f, 'r');
+    if ($file_handle) {
+        $csv_reader = new ReadCSV($file_handle, IS_IU_CSV_DELIMITER, "\xEF\xBB\xBF"); // Skip any UTF-8 byte order mark.
+        // get second row - look for header column names of email and password
+        $line = $csv_reader->get_row();
+        if ($line == null) {
+            $e->add('readerror', 'We had a read error on row 1');
+            return false;
+        }
+
+        $line = $csv_reader->get_row();
+        if ($line == null) {
+            $e->add('readerror', 'We had read error on row 2');
+            return false;
+        }
+
+        // if (!isset($line[3])) {
+        //     $e->add('headerError', 'Your header row is short of fields');
+        //     return false;
+        // }
+
+        if (strtolower(trim($line[0])) != "email") {
+            // || strtolower(trim($line[1])) != "firstname"
+            // || strtolower(trim($line[2])) != "lastname"
+            // || strtolower(trim($line[3])) != "password") {
+            $e->add('headerError', 'Your column headings in ROW2 are not right');
+            return false;
+        }
+
+        // read one more line to see if we have data
+        $line = $csv_reader->get_row();
+
+        if ($line == null) {
+            $e->add('readerror', 'We had a read error on row 3');
+            return false;
+        }
+
+    } else {
+        $e->add('readerror', 'We can\'t read that file');
+    }
+    fclose($file_handle);
+    return true;
+
+}
+
+function do_teamSync($f, $t, $l, $p) // $f is the file, $t is team id and $l is the log text file, $p processtype
+
+{
+
+    set_time_limit(0); // we don't want to time out.
+    // change the cursor to a wait
+
+    $n = strtotime("now");
+    $mex = wp_get_current_user();
+    $current_user = get_userdata($mex->ID)->user_email;
+    $today = date('d/m/y H:i:s', $n);
+
+// open text log file
+    $log = fopen($l, "a");
+    $res = [];
+    $res[] = 'PLACEHOLDER _ UNUSED';
+    doLog($res, $log, "Sync started at " . date('d/m/y H:i:s', $n));
+
+    $validCounter = 0;
+    $invalidCounter = 0;
+    $totalCounter = 0;
+    $duplicateCounter = 0;
+// arrays for incoming and current email addresses
+    $incoming = [];
+    $current = [];
+
+    $file_handle = @fopen($f, 'r');
+    $csv_reader = new ReadCSV($file_handle, IS_IU_CSV_DELIMITER, "\xEF\xBB\xBF"); // Skip any UTF-8 byte order mark.
+
+// read two lines to ditch header and title
+    $line = $csv_reader->get_row();
+    $line = $csv_reader->get_row();
+
+// read entire xls into array
+    while (($line = $csv_reader->get_row()) != null) {
+        if ($line[0] != "") {
+            $totalCounter++;
+            if (filter_var($line[0], FILTER_VALIDATE_EMAIL)) {
+                // is it already in incoming?
+                if (in_array(trim(strtolower($line[0])), $incoming)) {
+                    doLog($res, $log, "Duplicate email in incoming list: " . trim(strtolower($line[0])));
+                    $duplicateCounter++;
+                } else {
+                    $incoming[] = trim(strtolower($line[0]));
+                    $validCounter++;
+                }
+            } else {
+                $invalidCounter++;
+            }
+        }
+    }
+
+    fclose($file_handle);
+
+// now read all current tem members into current array
+    //$members = wc_memberships_for_teams_get_team_members($_POST['syncTeam'],  [ 'role' => 'member' ] );
+
+    $members = wc_memberships_for_teams_get_team_members($_POST['syncTeam']);
+    foreach ($members as $m) {
+        $user = $m->get_user();
+        $r = $m->get_role();
+        $current[] = [
+            'email' => get_userdata($user->ID)->user_email,
+            'status' => $r,
+            'id' => $user->ID,
+        ];
+    }
+
+    $members = wc_memberships_for_teams_get_invitations($_POST['syncTeam']);
+    foreach ($members as $m) {
+        $current[] = [
+            'email' => $m->get_email(),
+            'status' => $m->get_status(),
+        ];
+
+    }
+
+// create process log
+
+    $team_id = $t->get_id();
+
+// return one element with success message, or mutiple with first unused as errors
+
+// delete section
+
+//foreach current- if is in incoming
+    // yes - log already present
+    // no - delete or uninvite - and log
+// delete only
+if ($p == "del") { // do not even try if we are just adding
+    foreach ($incoming as $i) {
+        {
+
+            // is incoming in current array?
+            
+
+            
+            if (mb_searchForEmail($i['email'], $current)) {
+
+                        try {
+                            $inv = wc_memberships_for_teams_get_invitation($team_id, $i['email'])->cancel();
+                            doLog($res, $log, 'Existing =' . $i['email'] . ' invitation cancelled');
+                        } catch (Exception $e) {
+                            doLog($res, $log, 'Existing =' . $i['email'] . ' (attempting invitation cancellation) error: ' . $e->getMessage());
+                        }
+
+                    } else {
+                        try {
+                            // member
+                            //$t->remove_member($c['id'], false, 'Membership cancelled by '.$current_user.' during team sync refresh on '.$today);
+                            $u = get_user_by_email($i['email']);
+                            $t->remove_member($u->get_id());
+                            doLog($res, $log, 'Existing =' . $c['email'] . ' member removed');
+                        } catch (Exception $e) {
+                            doLog($res, $log, 'Existing =' . $c['email'] . ' (attempting member removal) error: ' . $e->getMessage());
+                        }
+                    }
+                }
+            }}
+    
+}
+
+
+    if ($p == "sync") { // do not even try if we are just adding
+        foreach ($current as $c) {
+            {
+                // if email present in delete sheets OR not present in sync ones
+                // remove member/invite
+
+                //if (!in_array($c['email'], $incoming)) {
+                if ($p == "del" && in_array($c['email'], $incoming)
+                    || !in_array($c['email'], $incoming)) {
+
+                    if (strtolower($c['status'] == "owner") || strtolower($c['status'] == "manager")) {
+                        doLog($res, $log, 'Existing =' . $c['email'] . ' - user is owner or manager so left alone');
+                    } else {
+                        if ($c['status'] == "pending") {
+                            // invitation
+
+                            try {
+                                $inv = wc_memberships_for_teams_get_invitation($team_id, $c['email'])->cancel();
+                                doLog($res, $log, 'Existing =' . $c['email'] . ' invitation cancelled');
+                            } catch (Exception $e) {
+                                doLog($res, $log, 'Existing =' . $c['email'] . ' (attempting invitation cancellation) error: ' . $e->getMessage());
+                            }
+
+                        } else {
+                            try {
+                                // member
+                                //$t->remove_member($c['id'], false, 'Membership cancelled by '.$current_user.' during team sync refresh on '.$today);
+                                $t->remove_member($c['id']);
+                                doLog($res, $log, 'Existing =' . $c['email'] . ' member removed');
+                            } catch (Exception $e) {
+                                doLog($res, $log, 'Existing =' . $c['email'] . ' (attempting member removal) error: ' . $e->getMessage());
+                            }
+                        }
+                    }
+                }
+        }
+    }
+// add new section
+
+// create new invites
+    // foreach incoming - if is in current
+    // DO NOT do for delete style sheets
+    if ($p != "del") {
+
+        foreach ($incoming as $inc) {
+            if (mb_searchForEmail($inc, $current)) {
+                doLog($res, $log, 'Incoming=' . $inc . ' is already a member or pending - skipped');
+            } else {
+
+                // create invitation
+                try {
+                    $invit = $t->invite($inc);
+                    //$invit = wc_memberships_for_teams_create_invitation(['team_id' => $team_id, 'email' => $inc]);
+                    doLog($res, $log, 'Incoming=' . $inc . ' invitation created');
+                } catch (Exception $e) {
+                    doLog($res, $log, 'Incoming=' . $inc . ' error: ' . $e->getMessage());
+                    if (5 === $e->getCode()) // no more seats{
+                    {
+                        doLog($res, $log, ""); // blank line into log
+                        doLog($res, $log, 'No more free seats - import abandoned at this point');
+                        break;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    // end of process
+    fclose($log);
+
+    return $res;
+
+}
+
+function doLog(&$r, $l, $txt)
+{
+    $r[] = $txt;
+    $write = fputs($l, $txt . "\n");
+}
+
+function mb_searchForEmail($email, $array)
+{
+
+    foreach ($array as $key => $val) {
+        if ($val['email'] === $email) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+?>

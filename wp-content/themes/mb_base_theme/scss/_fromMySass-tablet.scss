@@ -1,0 +1,140 @@
+@media only screen and (min-width: 401px) and (max-width: 900px) {
+
+  body {
+    width: 95%;
+    margin: auto auto;
+  }
+
+  #headerGrid .linkText {
+    font-size: .6rem;
+  }
+
+  #spacerH {
+    font-size: 1rem;
+  }
+
+  #videoPageGrid #resourceBlock #VidItems .vid_item .date_col,
+  #videoPageGrid #resourceBlock #VidItems .vid_item .title_col {
+    font-size: 1rem !important;
+  }
+
+  #videoPageGrid #resourceBlock #VidItems .vid_item .date_col {
+    margin-top: 1px !important;
+  }
+
+  .onlyMobile {
+    display: none;
+  }
+
+
+  // #headerGrid {
+  //   #ssLogoH {
+  //     img {
+  //       width: 75%;
+  //       margin: auto auto;
+  //       padding-left: 20%;
+  //     }
+  //   }
+  // }
+
+  // #bigvid {
+  //   video {
+  //     widows: 90%;
+  //     padding-left:10%;
+  //   }
+  // }
+
+  // #bigvid {
+  //   grid-area: bigvid;
+  //   width: 50%;
+  // }
+
+
+  #pageGrid {
+
+    display: grid;
+
+    // background:red;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas:
+      "bigvid bigvid bigvid"
+      "hero hero hero"
+      "content content content"
+      //"content content content"
+      "testimonials testimonials testimonials"
+      "smallcontent1 smallcontent1 smallcontent1"
+      "smallcontent2 smallcontent2 smallcontent2"
+      "shop shop shop"
+      "login login login";
+
+    #mainContent {
+      margin-bottom: 11px;
+
+      p {
+        color: #747474;
+        /* width: 77%; */
+        text-align: center;
+        // margin: -1px 75px 0 0 !important;
+        font-size: 1.2rem;
+        /* padding-right: 14px; */
+      }
+    }
+
+    .ORGwoocommerce ul.products li.product .price {
+      min-height: 5vh;
+    }
+
+    #ORGshopHome .woocommerce ul.products li.product a h2 {
+      min-height: 12vh;
+    }
+
+    #ORGshopHome .woocommerce ul.products li.product .button {
+      min-height: 5vh;
+    }
+
+    #ORGshopHome {
+
+      .product {
+        width: 42%;
+        margin: 6px 11px;
+      }
+
+      .mb_product {
+        font-size: 0.8em;
+        color: black;
+        line-height: 1.2em;
+        display: block;
+        min-height: 8vh;
+      }
+    }
+
+
+  }
+
+  // #shopHome .woocommerce ul.products li.product,
+  // #shopHome .woocommerce-page ul.products li.product {
+  //   width: 50%;
+  // }
+
+  #loginForm input {
+    font-size: unset;
+  }
+
+  #topbar {
+
+    .cartIcon {
+      font-size: 1.4em;
+    }
+
+    .contactUsList {
+      font-size: 1.5em;
+      line-height: unset;
+    }
+
+  }
+
+  // #hero h1 {
+  //   width:unset;
+  // }
+
+}

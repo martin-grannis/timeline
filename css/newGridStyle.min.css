@@ -1,0 +1,34 @@
+/*
+ Theme Name:   MB_Base
+ Description:  Very basic reset css and not much else
+ Author:       Martin B
+ Version:      0.1
+*/
+body, p, h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#cookieMessage p {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+}
+
+#topBar p {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+
+nav p {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: yellow;
+  color: white;
+}
+/*# sourceMappingURL=newGridStyle.min.css.map */

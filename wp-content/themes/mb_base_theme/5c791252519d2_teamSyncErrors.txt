@@ -1,0 +1,6 @@
+Sync started at 01/03/19 11:06:58
+Existing =djupedal@att.net - user is owner or manager so left alone
+Existing =sparf@plugin.ie invitation cancelled
+Existing =james@btinternet.com invitation cancelled
+Existing =abc@hhhhjk.com invitation cancelled
+Incoming=thequeen@buckpal.com invitation created

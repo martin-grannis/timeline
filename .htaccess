@@ -1,0 +1,40 @@
+AuthType Basic
+AuthName "Timeline2 is restricted by Password"
+AuthBasicProvider    file
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
+satisfy any
+order deny,allow
+deny from all
+#allow from 5.64.74.72
+# this is SJC site
+allow from 213.122.188.250
+# next one is this server IP - as it calls back to itself on a rest api in 5.0.3
+allow from 178.62.67.97
+# next is sagepay for callback
+allow from 195.170.169
+
+allow from 94.194.135.98
+
+allow from 5.67.139.247
+allow from localhost
+
+#tim home
+allow from 92.22.196.239
+
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css|woff)$">
+ExpiresActive On
+ExpiresDefault A2592000
+</FilesMatch>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

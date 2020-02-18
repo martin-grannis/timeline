@@ -1,0 +1,389 @@
+*** SagePay Form / Direct Changelog **
+2019.06.13 - version 3.14.0
+ * Add payment fail message to basket and order notes for SagePay Form
+ * Update order status to cancelled for payment failures.
+
+2019.06.11 - version 3.13.8
+ * Force empty city field for countries that don't use city
+ * Additional System Status checks : which SagePay methods are active.
+
+2019.05.30 - version 3.13.7
+ * Fix check for PayPal/CVV
+ * Force non-XML basket for PayPal transactions
+
+2019.05.23 - version 3.13.6
+ * Clear session variables if 3D Secure fails
+ * Limit field lengths for variables sent to Sage to avoid 5080 error
+
+2019.04.118 - version 3.13.5
+ * WooCommerce 3.6 fixes
+
+2019.04.12 - version 3.13.4
+ * Unload WooCommerce query.payment and use custom version to ensure card expiry numbers are 00 / 00 and not 00 / 0000
+
+2019.04.09 - version 3.13.3
+ * Remove html_entity_decode on SagePay Form failure URL
+ * Fix Uncaught Error: Wrong parameters for Exception
+ * Rework 3D Secure checks, add additional redirect if order does not to be paid
+
+2019.03.14 - version 3.13.2
+ * Add Authorised to needs_payment
+
+2019.03.13 - version 3.13.1
+ * fix woocommerce_sagepaydirect_credit_card_form_fields filter
+
+2019.02.28 - version 3.13.0
+ * Add authorised order status to wc_order_is_editable
+ * Allow basket options to be removed
+ * Check if pre-order requires payment now
+ * Add CVV option for token payments.
+ * Add 3D Secure option for token payments.
+
+2019.11.12 - version 3.12.4
+ * WC 3.5 notice
+
+2019.09.25 - version 3.12.3
+ * Update SSL check for SagePay Direct.
+
+2018.09.11 - version 3.12.2
+ * Set orders to fail where necessary, missed 2
+
+2018.09.10 - version 3.12.1
+ * PayPal as card option for Form
+ * Set orders to fail where necessary
+ * Update logging
+ * Tweak JS for non-iframe 3D Secure form
+
+2018.08.23 - version 3.12.0
+ * Improve transaction meta storage.
+ * Remove WC_Gateway_Sagepay_Direct_Update_Notice
+ * Replace is_ssl check with is_secure
+ * WC 3.4 compatibility
+ * Add "Diners Club" (uses DC)
+ * Fix PHP Fatal error:  Uncaught Error: Call to a member function empty_cart() on null
+
+2018.05.10 - version 3.11.2
+ * re-order $order_key_array array to cope with custom VendorTXCode prefixes.
+ * PayPal Logo for SagePay Form/Direct
+ * Fix PayPal transactions in Direct.
+
+2018.03.02 - version 3.11.0
+ * Fix PHP Fatal error:  Uncaught Error: Call to a member function empty_cart() on null
+ * Add support for PayPal with SagePay Direct
+
+2018.02.14 - version 3.10.3
+ * _sageresult for SagePay Form transactions - contains all the returned information from Sage
+
+2018.01.22 - version 3.10.2
+ * Additional 3D Secure error checks
+ * SagePay Form decrypt update
+
+2017.12.06 - version 3.10.1
+ * Add mcrypt/openSSL notes to the WooCommerce System Status
+ * Add php_max_input_vars message to the WooCommerce System Status
+ * openssl_encrypt and mCrypt "is_enabled" check
+ * tidy up file structure
+ * Fix & in XML baskets
+
+2017.11.12 - version 3.10.0
+ * Make sure cart is emptied
+ * Fix shipping address.
+ * Remove unnecessary “optional” token option.
+ * Make sure $this->vendortxcodeprefix is clean
+ * Add openssl support for SagePay Form.
+ * Add fraud screening check to SagePay Form
+ * Fix Direct dropdown if option has not been set in admin.
+ * Format the values sent in colon delimited basket.
+ * Add sanitised card details to SagePay Direct order notes.
+ * Set credit card fields to type="tel" for mobile checkout.
+
+2017.08.17 - version 3.9.1
+ * Update Woo Plugin Header
+ * Fix URLs for non standard installations
+ * Improve checkout error messages
+ * Redirect to checkout for card/address failures
+ * Make sure failed refunds return false
+ * Fix SagePay Direct Transaction details showing in emails when unchecked
+ * Add Authorised order status
+
+2017.07.05 - version 3.9.0
+ * Allow non-iFrame 3D Secure
+
+2017.06.26 - version 3.8.1
+ * Fix shipping calculations in baskets
+ * Fix Undefined Constant meta_output 
+
+2017.06.23 - version 3.8.0
+ * do_action added after $order->payment_complete();
+
+2017.05.25 - version 3.7.6
+ * Leave http/https in Success URL
+ * Add filter to Success URL
+ * Remove simulate option.
+ * Fix array to string conversion error when using coupons
+ * WooCommerce 3.1 fixes
+
+2017.05.04 - version 3.7.5
+ * Fix Uncaught Error: Call to undefined method WC_Order::get_shipping_total() 
+
+2017.05.02 - version 3.7.4
+ * Fix Fatal error: Call to undefined function apply_filter()
+ 
+2017.05.01 - version 3.7.3
+ * Fix - US state not sent correctly in Form/Direct
+ * Fix - add 'en-dash' in 'unwanted' array
+ * Improvement - Filter for meta data in basket. 
+ * Fix - order_shipping was called incorrectly
+
+2017.04.07 - version 3.7.2
+ * Fix - make sure delivery address information is always set even if shipping is not needed.
+ * General - remove references to Protocol 3.00
+
+2017.04.06 - version 3.7.1
+ * Fix mcrypt check for SagePay form
+
+2017.03.28 - version 3.7.0
+ * WooCommerce 3.0 compatibility
+ * Improvements to inline docs
+ * Optional additional SagePay info included in Admin new order email for Direct transactions.
+ * Remove “simulate” from SagePay Form
+ * Check for mcrypt and disable SagePay Form if not available
+
+2017.02.20 - version 3.5.1
+ * Remove line breaks
+
+2017.02.20 - version 3.5.0
+ * Option to send basket and choose format used
+
+2017.02.17 - version 3.4.1
+ * Fix for invalid basket
+
+2017.01.31 - version 3.4.0
+ * General - Change to XML for basket
+ * Add fraud screening check to SagePay Direct
+ * Add checks column to display Address, Postcode, CV2 and 3D Secure status
+
+2016.12.01 - version 3.3.9
+ * General - FORM - prevent orders from being updated more than once.
+
+2016.11.28 - version 3.3.8
+ * General - DIRECT - make card types translatable and add filter (wc_sagepaydirect_cardtypes)
+ * General - DIRECT - add Credit to Visa and MasterCard Card Type labels 
+
+2016.11.21 - version 3.3.7
+ * General - SagePay Form Set AUTHENTICATE and DEFERRED to processing 
+
+2016.10.31 - version 3.3.6
+ * Enhancement - filter arguments sent to Sage
+ * General - improve 3d secure checks
+ * Fix - Sage won't accept IP6 so reject anything over 15 characters.
+ * Fix - mb_convert_encoding
+
+2016.09.29 - version 3.3.5
+ * Enhancement - Add VendorTXCode prefix setting
+
+2016.07.16 - Version 3.3.4
+ * Fix - Non-static method WC_Sagepay_Common_Functions::build_vendortxcode()
+ * General - Add test card information to SagePay Form
+
+2016.07.02 - Version 3.3.3
+ * Fix - PHP7 Fatal Error
+
+2016.06.30 - Version 3.3.2
+ * Maintenance - tweak checkout.css
+ * Enhancement - replace VendorTXCode code with a common function build_vendortxcode
+ * Fix - re-add order->id in VendorTXCode, using $order->get_order_number() - causes issue from Sequential Order Numbers.
+ * Fix - stop saving cards unnecessarily 
+ * Fix - for £0 orders in SagePay Direct
+
+2016.06.22 - Version 3.3.0
+ * Enhancement - Tokens for SagePay Direct (requires WC 2.6)
+ * Maintenance - Move Form admin fields to separate file
+ * Fix - Update SagePay Form accepted card types.
+ * Maintenance - Combine Subscriptions and Pre-Orders into separate class 
+
+2016.05.11 - version 3.2.3
+ * Fix - version number bump
+
+2016.05.08 - version 3.2.2
+ * Fix - 3d Secure form exit
+
+2016.05.03 - version 3.2.1
+ * Maintenance - Add drop down to SagePay Direct for Credit Card Type, no more Bin List, unfortunately it’s too unreliable :(
+ * Maintenance - Limit basket to 7500 characters. Remove basket if length exceeds that.
+ * Enhancement - Allow credit card form fields to be filtered - ‘woocommerce_sagepaydirect_credit_card_form_fields’
+
+2016.04.26 - version 3.2.0
+ * Fix - only load sagepay-form-admin-notice-class.php in admin
+ * Maintenance - Use WC shipping address - SagePay Direct
+ * Maintenance - use WC()->session instead of $_SESSION
+ * Maintenance - Add default postcode option for Elavon users
+ * Maintenance - Add line break option
+ * Maintenance - Remove discount from basket if discount is 0
+ * Enhancement - Commenize functions.
+
+2016-03-18 - version 3.1.11
+ * Maintenance - Fix “trying to get property of none object”
+
+2016.02.29 - version 3.1.10
+ * Enhancement - Form mcrypt warning notice 
+ * Enhancement - Add $order to VendorTXCode filter
+ * Maintenance - Rename SagePay Form class file
+ * Maintenance - Use WC shipping address
+
+2016.02.08 - version 3.1.9
+ * Additional BIN checking for SagePay Direct.
+ * Allow VendorTXCode to be filtered.
+
+2015.12.11 - version 3.1.8
+ * Fix - URL for loading gif
+
+2015.11.27 - version 3.1.7
+ * Fix - Direct HTTPS admin notice showing when Direct is not enabled.
+
+2015.11.12 - version 3.1.6
+ * Fix - billing address fields should not be included in shipping address if billing and shipping are different.
+
+2015.11.04 - version 3.1.5
+ * Fix - Fatal error: Can't use function return value in write context
+
+2015.11.02 - version 3.1.4
+ * remove SSL notice from front end
+ * add check for WordPressHTTPS
+ * Make SSL name dismissible
+
+2015.10.04 - version 3.1.3
+ * Subscriptions 2.0
+
+2015.09.01 - version 3.1.2
+ * Fix - refunds
+ * Fix - Maestro card checking
+ * Fix - Undefined index: protocol
+ * General - No more 2.23
+
+2015.08.17 - version 3.1.1
+ * Interim fix for unwanted characters in SagePay Direct basket
+
+2015.07.26 - version 3.1.0
+ * Enhancement - Add basket to Direct
+ * Enhancement - improve SagePay Form error message, add info to System Status
+ * Enhancement - Add filters to shipping info
+ * Fix - deprecated function notice.
+ * Fix SagePay Direct $$
+ * WC 2.4 Compatibility
+
+2015.07.05 - version 3.0.3
+ * Fix - backwards compatibility with older versions of PHP
+ * Fix - missing CC image
+ * Enhancement - Improve delivery address checking
+
+2015.06.19 - version 3.0.2
+ * Fix - Image paths
+
+2015.06.17 - version 3.0.1
+ * Fix - Windows hosting path
+
+2015.06.14 - version 3.0.0
+ * Enhancement - SagePay Direct
+
+2015.03.11 - version 2.2.6
+ * SSL paths
+
+2015.02.24 - version 2.2.5
+ * Fix path to cc images
+
+2015.02.19 - version 2.2.4
+ * WC 2.3 compatibility
+
+2015.01.18 - version 2.2.3
+ * fix headers already sent message
+ * remove unnecessary nag notice code
+ * fix discount in My SagePay 
+
+2015.01.13 - version 2.2.1
+ * Proper logging
+ * Rearrange settings
+
+2014.12.21 - version 2.2.0
+ * Add “What is SagePay link
+ * Add SagePay Logo
+ * Add Protocol 3 nag notice - 2.23 is no longer supported after July 2015.
+
+2014.10.19 - version 2.1.8
+ * Add transaction ID to payment_complete for WC 2.2
+ * Add additional checks and die message if return fails
+ * Make V3 the default protocol in settings
+
+2014.05.29 - version 2.1.7
+ * remove spaces from TX Code if they exist
+
+2014.03.31 - version 2.1.6
+ * Allow $order->get_cancel_order_url() to be filtered
+
+2014.03.24 - version 2.1.5
+ * PayPal logo added to card types
+ * html_entity_decode( $order->get_cancel_order_url() )
+
+2014.03.09 - version 2.1.4
+ * check for shipping value in basket XML
+
+2014.02.07 - version 2.1.3
+ * modify success URL
+
+2014.01.18 - version 2.1.2
+ * Fix WC Deprecated function message (add_inline_js)
+ * Use proper checkout page redirect 
+
+2013.12.14 - Version 2.1.1
+ * WC 2.1 support
+ * use get_woocommerce_currency()
+
+2013.11.05 - Version 2.1.0
+ * Add Protocol 3 support
+ * Add surcharge XML / Settings / Add surcharge vhtml_entity_decode( $order->get_cancel_order_url() )alue to order
+ * Add Test and Simulate Encryption Password fields.
+ * Fix sagepay info in order notes 
+
+2013.10.16 - Version 2.0.5
+ * Remove debugging code causing some checkouts to not auto transfer to Sage
+
+2013.10.15 - Version 2.0.4
+ * Fix parse error
+
+2013.10.02 - Version 2.0.3
+ * Remove all the non-english things
+ * Add proper localization
+ * Add credit card chooser for Admin, image shown to customer reflects choice made in settings
+
+2013.06.06 - Version 2.0.2
+ * Added Sage return values to order notes
+
+2013.03.19 - Version 2.0.1
+ * Add Discount / Coupon to order information sent to SagePay
+
+2013.02.25 - Version 2.0.0
+ * Fix incorrect order status for deferred and registered payments
+ * Delivery State fix
+
+2012.12.05 - version 1.3.0
+ * Cleaned up code
+ * WC 2.0 Compat
+
+2012.12.05 - version 1.2.1
+ * Updater
+
+2012.05.30 - version 1.2
+ * Changes to allow integration with Sage 50 Accounts
+
+2012.01.26 - version 1.1.1
+ * WC 1.4 compatibility
+
+2011.12.01 - version 1.1
+ * Added Woo Updater
+ * Changed item price code to work better with WC 1.3
+
+2011.11.07 - version 1.0.1
+ * Fixed shipping address when not set
+
+2011.10.06 - version 1.0
+ * First Release

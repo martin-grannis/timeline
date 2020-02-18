@@ -1,0 +1,6 @@
+Sync started at 22/02/19 14:32:42
+Existing =djupedal@att.net - user is owner or manager so left alone
+Incoming=itsupport@stjohns-nottm.ac.uk invitation created
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped
+Incoming=great.garbo@hotmail.com is already a member or pending - skipped

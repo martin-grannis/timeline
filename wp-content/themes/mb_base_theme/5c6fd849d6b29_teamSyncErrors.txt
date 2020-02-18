@@ -1,0 +1,5 @@
+Sync started at 22/02/19 11:08:57
+Incoming=a already a member or pending - skipped
+Incoming=f already a member or pending - skipped
+Incoming=j already a member or pending - skipped
+Incoming=s already a member or pending - skipped

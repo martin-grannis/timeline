@@ -1,0 +1,1 @@
+Sync started at 20/02/19Incoming=3, Valid=3, Invalid=1

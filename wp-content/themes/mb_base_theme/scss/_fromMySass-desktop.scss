@@ -1,0 +1,101 @@
+@media only screen and (min-width: 901px) and (max-width: 1500px) {
+
+  body {
+    width: 60%;
+    margin: auto auto;
+  }
+
+  #headerGrid .linkText {
+    font-size: .6rem;
+  }
+
+  .woocommerce .quantity .qty {
+    width: 7rem;
+  }
+
+  #sagepaydirect-card-type,#sagepaydirect-card-number, #sagepaydirect-card-expiry, #sagepaydirect-card-cvc {
+    font-size:1rem !important;
+  }
+
+  #spacerH {
+    font-size: 1rem;
+  }
+
+  #videoPageGrid #resourceBlock #VidItems .vid_item .date_col,
+  #videoPageGrid #resourceBlock #VidItems .vid_item .title_col {
+    font-size: 1rem !important;
+  }
+
+  #videoPageGrid #resourceBlock #VidItems .vid_item .date_col {
+    margin-top: 1px !important;
+  }
+
+
+  #pageGrid {
+
+    // background:red;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas:
+      "bigvid bigvid bigvid"
+      "hero hero hero"
+      "content content content"
+      //"content content content"
+      "testimonials testimonials testimonials"
+      "smallcontent1 smallcontent1 smallcontent1"
+      "smallcontent2 smallcontent2 smallcontent2"
+      "shop shop shop"
+      "login login login";
+
+
+    #mainContent {
+      margin-bottom: 11px;
+
+      p {
+        color: #747474;
+        /* width: 77%; */
+        text-align: center;
+        //          margin: -1px 75px 0 0 !important;
+        font-size: 1.1rem;
+        /* padding-right: 14px; */
+      }
+    }
+
+    #hero h1 {
+      font-size: 1.4rem;
+    }
+
+  }
+
+  #loginForm input {
+    font-size: unset;
+  }
+
+  #logo {
+
+    img {
+      font-size: 1.4em;
+      line-height: unset;
+      height: 216px;
+      margin: 13px 0 14px 34px;
+      max-width: unset;
+    }
+
+  }
+
+  .onlyMobile {
+    display: none;
+  }
+
+  #topbar {
+
+    .cartIcon {
+      font-size: 1.4em;
+    }
+
+    .contactUsList {
+      font-size: 1.5em;
+      line-height: unset;
+    }
+
+  }
+}

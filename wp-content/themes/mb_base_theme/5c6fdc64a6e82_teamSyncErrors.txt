@@ -1,0 +1,5 @@
+Sync started at 22/02/19 11:26:28
+Incoming=itsupport@stjohns-nottm.ac.uk invitation created
+Incoming=fred@hotmail.co.uk invitation created
+Incoming=james@btinternet.com invitation created
+Incoming=sparf@plugin.ie invitation created

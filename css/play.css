@@ -1,0 +1,99 @@
+body, div, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif; }
+
+section {
+  padding: 10px;
+  color: white; }
+
+#mainWrapper {
+  display: grid;
+  grid-template-rows: auto minmax(75px, auto) minmax(75px, auto) 1fr 1fr minmax(75px, auto) minmax(75px, auto) auto;
+  /* Footer */
+  /*grid-template-columns: 1fr 2fr 2fr 1fr;*/
+  grid-template-areas: "topbar" "search" "nav" "content1" "content2" "sidebar1" "sidebar2" "footer";
+  width: 100vw;
+  height: 100vh; }
+  @media (min-width: 768px) {
+    #mainWrapper {
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "topbar topbar" "nav search" "content1 content1" "content2 content2" "sidebar1 sidebar1" "sidebar2 sidebar2" "footer footer"; } }
+
+#topbar {
+  display: grid;
+  grid-area: topbar;
+  grid-template-areas: "oneRow oneRow" "topLeft topRightA" "topLeft topRightB" "topLeft topRightC"; }
+  #topbar .topLeftOptional {
+    display: none; }
+  @media (min-width: 768px) {
+    #topbar {
+      grid-template-areas: "oneRow oneRow oneRow" "topLeft topLeftOptional topRightA" "topLeft topLeftoptional topRightB" "topLeft topLeftoptional topRightC"; }
+      #topbar .topLeftOptional {
+        display: block; } }
+
+.oneRow {
+  background-color: blue;
+  color: white;
+  grid-area: oneRow;
+  text-align: center;
+  padding: 10px; }
+
+.topLeft {
+  grid-area: topLeft; }
+
+.topLeftOptional {
+  grid-area: topLeftOptional; }
+
+.topRightA {
+  grid-area: topRightA; }
+
+.topRightB {
+  grid-area: topRightB; }
+
+.topRightC {
+  grid-area: topRightC; }
+
+.topLeft img {
+  height: 80px;
+  padding: 10px 0 5px 10px; }
+
+.topRightA {
+  padding: 10px; }
+
+.topRightB {
+  padding: 0 0 5px 10px; }
+
+.topRightC img {
+  height: 40px;
+  padding: 5px 0 5px 10px; }
+
+#nav {
+  background-color: #0b8173;
+  grid-area: nav; }
+
+#search {
+  background-color: #b479a0;
+  grid-area: search; }
+
+#content1 {
+  background-color: #0a9bd6;
+  grid-area: content1; }
+
+#content2 {
+  background-color: #3ad61c;
+  grid-area: content2; }
+
+#sidebar1 {
+  background-color: #c0c0c0;
+  grid-area: sidebar1; }
+
+#sidebar2 {
+  background-color: #d67b22;
+  grid-area: sidebar2; }
+
+#footer {
+  background-color: #000000;
+  grid-area: footer; }
+
+/*# sourceMappingURL=play.css.map */

@@ -1,0 +1,36 @@
+#sagepaydirect-cc-form .wc-credit-card-form-card-number,
+#sagepaydirect-cc-form .wc-credit-card-form-card-expiry,
+#sagepaydirect-cc-form .wc-credit-card-form-card-cvc {
+	font-size: 1.5em;
+	padding: 8px;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+#sagepaydirect-cc-form .wc-credit-card-form-card-type {
+	box-sizing: border-box;
+    width: 100% !important;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+    border-color: #bbb3b9 #c7c1c6 #c7c1c6;
+    font-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#sagepaydirect-cc-form .visa {
+	background-image: url(../card-visa.png);
+}
+
+#sagepaydirect-cc-form .mastercard {
+	background-image: url(../card-mastercard.png);
+}
+
+#sagepaydirect-cc-form .discover {
+	background-image: url(../card-discover.png);
+}
+
+#sagepaydirect-cc-form .amex {
+	background-image: url(../card-american-express.png);
+}

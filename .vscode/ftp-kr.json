@@ -1,0 +1,16 @@
+{
+    "host": "mb.stjohnstimeline.co.uk",
+    "username": "www-data",
+    "password": "Www-datA",
+    "remotePath": "/var/www/mb",
+    "protocol": "sftp",
+    "port": 36226,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

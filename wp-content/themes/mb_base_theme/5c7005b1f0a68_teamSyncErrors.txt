@@ -1,0 +1,7 @@
+Sync started at 22/02/19 14:22:41
+Existing = - user is owner or manager so left alone
+Existing = invitation cancelled
+Existing = invitation cancelled
+Existing = invitation cancelled
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped

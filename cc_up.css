@@ -1,0 +1,87 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-floating-label {
+    position: relative;
+
+}
+
+.text-area-small {
+    /*font-family: arial !important;*/
+    font-size: 10px !important;
+    line-height: 17px !important;
+}
+
+.res_link {
+    text-decoration: underline;
+}
+
+input, textarea {
+    margin-bottom: 10px !important;
+}
+
+#buttonage {
+    display: flex;
+}
+
+#buttonage input {
+    margin-right: 10px;
+}
+
+.form-floating-label [type='text'],
+.form-floating-label [type='password'],
+.form-floating-label [type='date'],
+.form-floating-label [type='datetime'],
+.form-floating-label [type='datetime-local'],
+.form-floating-label [type='month'],
+.form-floating-label [type='week'],
+.form-floating-label [type='email'],
+.form-floating-label [type='number'],
+.form-floating-label [type='search'],
+.form-floating-label [type='tel'],
+.form-floating-label [type='time'],
+.form-floating-label [type='url'],
+.form-floating-label [type='color'],
+.form-floating-label textarea {
+    margin-bottom: 0;
+    color: #8a8a8a;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 30px 1rem 1rem 25px;
+}
+
+.form-floating-label label {
+    color: #cacaca;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 25px;
+    bottom: 0;
+    transition: all 0.2s ease-in;
+    font-weight: 300;
+}
+
+.form-floating-label textarea ~ label {
+    top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.form-floating-label input:focus ~ label,
+.form-floating-label input:disabled[value] ~ label,
+.form-floating-label.has-value input ~ label {
+    top: 0;
+    font-size: 14px;
+    color: dodgerblue;
+    font-weight: 400;
+}
+
+.form-floating-label textarea:focus ~ label,
+.form-floating-label.has-value textarea ~ label {
+    top: 0;
+    font-size: 14px;
+    color: dodgerblue;
+    font-weight: 400;
+}
+

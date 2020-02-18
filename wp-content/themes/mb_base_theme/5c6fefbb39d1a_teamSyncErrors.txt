@@ -1,0 +1,7 @@
+Sync started at 22/02/19 12:48:59
+Incoming=itsupport@stjohns-nottm.ac.uk is already a member or pending - skipped
+Incoming=fred@hotmail.co.uk is already a member or pending - skipped
+Incoming=james@btinternet.com is already a member or pending - skipped
+Incoming=sparf@plugin.ie is already a member or pending - skipped
+Incoming=great.garbo@hotmail.com error: No more seats left
+No more free seats - import abandoned at this point

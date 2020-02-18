@@ -1,0 +1,1 @@
+Sync started at Incoming=3, Valid=3, Invalid=1

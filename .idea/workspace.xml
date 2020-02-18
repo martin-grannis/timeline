@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b2d8da7-f0cc-4ca7-8b58-785b567c60e7" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-85413172">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="25" />
+          <entry key="html" value="23" />
+          <entry key="js" value="10" />
+          <entry key="map" value="2" />
+          <entry key="php" value="120" />
+          <entry key="scss" value="5" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="25" />
+          <entry key="HTML" value="23" />
+          <entry key="JavaScript" value="10" />
+          <entry key="PHP" value="120" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SCSS" value="5" />
+          <entry key="SourceMap" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="553" />
+          <entry key="html" value="168" />
+          <entry key="js" value="196" />
+          <entry key="php" value="9628" />
+          <entry key="scss" value="2022" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="553" />
+          <entry key="HTML" value="181" />
+          <entry key="JavaScript" value="196" />
+          <entry key="PHP" value="9615" />
+          <entry key="SCSS" value="2022" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.rename.constructor" />
+      <usages-collector id="statistics.php.composer.actions" />
+      <usages-collector id="statistics.php.new.class" />
+      <usages-collector id="statistics.php.new.test" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.php.composer.command.options" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cc_up.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1190">
+              <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cc_up_process.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cc_up.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>outth</find>
+      <find>&lt;/p&gt;</find>
+      <find>template_include</find>
+      <find>wp_error</find>
+      <find>-&gt;errors</find>
+      <find>this-&gt;errors</find>
+      <find>404</find>
+      <find>sanitize_text_field</find>
+      <find>sanitize_cal</find>
+      <find>sanit</find>
+      <find>maxlength</find>
+      <find>fields[' .$key.']</find>
+      <find>valid</find>
+      <find>save-post</find>
+      <find>sanitize_text</find>
+      <find>invalid post</find>
+      <find>&gt;&lt;/text&gt;</find>
+      <find>[</find>
+      <find>&quot; class=&quot;element textarea medium&quot;</find>
+      <find>log</find>
+      <find>buildNumber</find>
+      <find>&quot;</find>
+      <find>$myJ</find>
+      <find>display</find>
+      <find>media</find>
+      <find>&quot;form-floating-label&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&lt;/section&gt;</replace>
+      <replace>&gt;&quot;&gt;</replace>
+      <replace>$myJ[</replace>
+      <replace>&quot;</replace>
+      <replace>description</replace>
+      <replace>$myJ['</replace>
+      <replace>$_POST</replace>
+      <replace>&quot;form-floating-label has-value&quot;</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\plugins\advanced-custom-fields\core\controllers</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\plugins\advanced-custom-fields\core</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\plugins\advanced-custom-fields</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\plugins\advanced-custom-fields\core\fields</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-includes</dir>
+      <dir>C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-admin</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/style.scss" />
+        <option value="$PROJECT_DIR$/play.html" />
+        <option value="$PROJECT_DIR$/play.css" />
+        <option value="$PROJECT_DIR$/play.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/scss/style.scss" />
+        <option value="$PROJECT_DIR$/css/play.css" />
+        <option value="$PROJECT_DIR$/headroom.js" />
+        <option value="$PROJECT_DIR$/play_content.php" />
+        <option value="$PROJECT_DIR$/play.php" />
+        <option value="$PROJECT_DIR$/scss/play.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/css/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/footer.php" />
+        <option value="$PROJECT_DIR$/components_view.html" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/single-resource.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/rewrite.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/single-private-resource.php" />
+        <option value="$PROJECT_DIR$/wp-includes/class-wp-theme.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/single-noview-private-resource.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/private_links.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/validation.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/post_save_button.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/posts_taxonomies.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/custom_fields.php" />
+        <option value="$PROJECT_DIR$/cc_up.js" />
+        <option value="$PROJECT_DIR$/html_formatter_function.php" />
+        <option value="$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/18464/preview/index_with_testimonials.html" />
+        <option value="$PROJECT_DIR$/cc_upd_mb.js" />
+        <option value="$PROJECT_DIR$/f.html" />
+        <option value="$PROJECT_DIR$/cc_up.php" />
+        <option value="$PROJECT_DIR$/cc_up.css" />
+        <option value="$PROJECT_DIR$/cc_up_process.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="localScope" pattern="file:scss/play.scss||file:wp-content/themes/mb_base_theme/scss/style.scss" />
+  </component>
+  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" listening_started="true" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpServers">
+    <servers>
+      <server host="mb.stjohnstimeline.co.uk" id="c22bae87-32eb-44cd-b8f0-c73a56af2124" name="mb.stjohnstimeline.co.uk" port="443" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/mb" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mb_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mb_base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mb_base" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mb_base" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="C:/Ruby25-x64/bin/sass.bat" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="options.lastSelected" value="reference.webide.settings.project.settings.php.phpunit" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme\css" />
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme" />
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme\scss" />
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\scss" />
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme\outTheWay" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m.barrett\OneDrive - St John's College\mb_base\wp-content\themes\mb_base_theme" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b2d8da7-f0cc-4ca7-8b58-785b567c60e7" name="Default Changelist" comment="" />
+      <created>1536595557420</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536595557420</updated>
+      <workItem from="1536595559226" duration="3614000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3614000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17910448" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.1711111" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.1712766" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49946696" visible="true" weight="0.3288889" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50053304" side_tool="true" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$query-&gt;query_vars[&quot;post_type&quot;]" />
+        <watch expression="$query-&gt;query[&quot;resource&quot;]" />
+        <watch expression="$post-&gt;ID" />
+      </configuration>
+      <configuration name="cc_up_process.php">
+        <watch expression="$_FILES" language="PHP" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>$_FILES</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/single-noview-private-resource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="31" selection-start-line="14" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/search-filter-pro/admin/includes/class-search-filter-post-data-validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="529" column="13" selection-start-line="529" selection-start-column="13" selection-end-line="529" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="862" selection-start-line="862" selection-end-line="862" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/controllers/everything_fields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="262" column="62" selection-start-line="262" selection-start-column="57" selection-end-line="262" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/controllers/field_groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/fields/_functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="409" column="11" selection-start-line="409" selection-start-column="11" selection-end-line="409" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/fields/text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="201" column="25" lean-forward="true" selection-start-line="201" selection-start-column="25" selection-end-line="201" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/formatting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4946">
+          <caret line="4748" selection-start-line="4748" selection-end-line="4748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/private_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="50" column="86" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-hook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/validation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/post_save_button.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="147" selection-start-line="23" selection-start-column="147" selection-end-line="23" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/custom_fields.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3264">
+          <caret line="192" column="18" selection-start-line="184" selection-start-column="16" selection-end-line="192" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/functions/posts_taxonomies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/post-new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/wp-db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10098">
+          <caret line="602" selection-start-line="602" selection-end-line="602" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12274">
+          <caret line="729" selection-start-line="729" selection-end-line="729" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11458">
+          <caret line="678" selection-start-line="678" selection-end-line="678" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/plugin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2890">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc_up.js" />
+    <entry file="file://$PROJECT_DIR$/html_formatter_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_testimonial-slider.zip/testimonial-slider/testimonial-slider.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_foundation-5-top-bar.zip/foundation-5-top-bar/foundation-5-top-bar.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/play_content.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/15180/preview/index_with_tetimonials.html" />
+    <entry file="file://C:/Program Files/CoffeeCup Software/Site Designer/library/editor/shared/framework/foundation/js/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6489" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/21852/preview/index_with_testimonials.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp2_testimonial-slider.zip/testimonial-slider/testimonial-slider.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/18464/preview/index_with_testimonials.html" />
+    <entry file="file://C:/Program Files/CoffeeCup Software/Site Designer/library/editor/responsive-site-designer/components.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/css/foundation.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mb_base_theme/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3587">
+          <caret line="211" lean-forward="true" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_form-floating-label.zip/form-floating-label/form-floating-label.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_form-floating-label.zip/form-floating-label/form-floating-label.js" />
+    <entry file="file://$PROJECT_DIR$/f.html" />
+    <entry file="file://$PROJECT_DIR$/cc_upd_mb.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/CoffeeCup Software/Site Designer/library/editor/shared/framework/foundation/js/foundation.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files/CoffeeCup Software/Site Designer/library/editor/shared/js/vendor.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4459" selection-start-line="4" selection-start-column="4456" selection-end-line="4" selection-end-column="4459" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/16524/preview/index.html" />
+    <entry file="file://$USER_HOME$/AppData/Local/CoffeeCup Software/Site Designer/cache/21760/preview/index_with_testimonials.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_simple_ui_kit-web_Free02-01-2017_1619671090.zip/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11426" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_simple_ui_kit-web_Free02-01-2017_1619671090.zip/web/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1433" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_simple_ui_kit-web_Free02-01-2017_1619671090.zip/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="1129" column="6" selection-start-line="1129" selection-start-column="1" selection-end-line="1129" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc_up.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc_up.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc_up_process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>localScope</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30268198" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="localScope" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

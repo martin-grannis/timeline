@@ -1,0 +1,30 @@
+#headerGrid {
+    display: grid;
+    grid-template-columns: 25% 25% 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  
+    grid-template-areas:
+      "logo logo topbar topbar"
+      //"contact cart search search"
+      "buttons buttons buttons buttons"
+      "loggedin loggedin loggedin loggedin";
+  
+    #loggedinDetails {
+      margin-left: 10px;
+      font-size: .7em;
+      color: black;
+      grid-area: loggedin;
+      display: flex;
+  
+      #lname {
+        flex: 1;
+      }
+  
+      #lout {
+        flex: 0;
+        margin-right: 25px;
+      }
+    }
+  
+  }
+  
